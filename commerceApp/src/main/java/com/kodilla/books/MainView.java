@@ -34,10 +34,11 @@ public class MainView extends VerticalLayout implements AppShellConfigurator {
         );
 
         HorizontalLayout header = new HorizontalLayout();
-        H1 title = new H1( "HOMEPAGE" );
+        H1 title = new H1( "HOMEPAGE COMMERCE APPLICATION" );
         header.add(title);
 
-        tabs.setAutoselect(false);
+
+        tabs.setAutoselect(true);
         tabs.setOrientation(Tabs.Orientation.VERTICAL);
         tabs.setWidthFull();
 

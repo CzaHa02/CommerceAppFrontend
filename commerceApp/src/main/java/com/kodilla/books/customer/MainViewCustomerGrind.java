@@ -36,7 +36,7 @@ public class MainViewCustomerGrind extends VerticalLayout {
         filter.setClearButtonVisible(true);
         filter.setValueChangeMode(ValueChangeMode.EAGER);
         filter.addValueChangeListener(event -> update());
-        customerGrid.setColumns("customerName", "customerSurname", "NIP", "Email", "companyName");
+        customerGrid.setColumns("customerName", "customerSurname", "nip", "email", "nameOfCustomerCompany");
 
         addNewCustomer.addClickListener(event -> {
             customerGrid.asSingleSelect().clear();
@@ -75,16 +75,16 @@ public class MainViewCustomerGrind extends VerticalLayout {
         private String customerName;
         private String customerSurname;
 
-        private int NIP;
-        private String Email;
+        private int nip;
+        private String email;
 
         private String nameOfCustomerCompany;
 
-        public Customer(String customerName, String customerSurname, int NIP, String Email, String nameOfCustomerCompany) {
+        public Customer(String customerName, String customerSurname, int nip,String email, String nameOfCustomerCompany) {
             this.customerName = customerName;
             this.customerSurname = customerSurname;
-            this.NIP = NIP;
-            this.Email = Email;
+            this.nip = nip;
+            this.email = email;
             this.nameOfCustomerCompany = nameOfCustomerCompany;
         }
 
@@ -106,20 +106,20 @@ public class MainViewCustomerGrind extends VerticalLayout {
             this.customerSurname = customerSurname;
         }
 
-        public int getNIP() {
-            return NIP;
+        public int getNip() {
+            return nip;
         }
 
-        public void setNIP(int NIP) {
-            this.NIP = NIP;
+        public void setNip(int nip) {
+            this.nip = nip;
         }
 
         public String getEmail() {
-            return Email;
+            return email;
         }
 
         public void setEmail(String email) {
-            Email = email;
+           this.email = email;
         }
 
         public String getNameOfCustomerCompany() {
@@ -135,12 +135,12 @@ public class MainViewCustomerGrind extends VerticalLayout {
             if (this == o) return true;
             if (o == null || getClass() != o.getClass()) return false;
             Customer customer = (Customer) o;
-            return NIP == customer.NIP && Objects.equals(customerName, customer.customerName) && Objects.equals(customerSurname, customer.customerSurname) && Objects.equals(Email, customer.Email) && Objects.equals(nameOfCustomerCompany, customer.nameOfCustomerCompany);
+            return nip == customer.nip && Objects.equals(customerName, customer.customerName) && Objects.equals(customerSurname, customer.customerSurname) && Objects.equals(email, customer.email) && Objects.equals(nameOfCustomerCompany, customer.nameOfCustomerCompany);
         }
 
         @Override
         public int hashCode() {
-            return Objects.hash(customerName, customerSurname, NIP, Email, nameOfCustomerCompany);
+            return Objects.hash(customerName, customerSurname, nip, email, nameOfCustomerCompany);
         }
 
 
