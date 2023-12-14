@@ -1,10 +1,9 @@
-package com.kodilla.books.customer;
+package com.kodilla.commerceApp.customer;
 
 
 
 import com.vaadin.flow.router.Route;
 
-import java.time.LocalDate;
 import java.util.HashSet;
 import java.util.Set;
 import java.util.stream.Collectors;

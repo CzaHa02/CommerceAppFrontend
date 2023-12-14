@@ -1,12 +1,9 @@
-package com.kodilla.books;
+package com.kodilla.commerceApp;
 
-import com.kodilla.books.customer.MainViewCustomerGrind;
-import com.kodilla.books.order.MainViewOrderGrind;
-import com.kodilla.books.product.MainViewProductGrind;
+import com.kodilla.commerceApp.customer.MainViewCustomerGrind;
+import com.kodilla.commerceApp.order.MainViewOrderGrind;
+import com.kodilla.commerceApp.product.MainViewProductGrind;
 import com.vaadin.flow.component.Component;
-import com.vaadin.flow.component.dependency.CssImport;
-import com.vaadin.flow.component.dependency.JsModule;
-import com.vaadin.flow.component.html.Div;
 import com.vaadin.flow.component.html.H1;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.component.tabs.Tab;

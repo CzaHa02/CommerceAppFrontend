@@ -1,4 +1,4 @@
-package com.kodilla.books.product;
+package com.kodilla.commerceApp.product;
 
 import java.util.Set;
 import java.util.HashSet;

@@ -1,12 +1,6 @@
-package com.kodilla.books.order;
-
-import com.kodilla.books.product.MainViewProductGrind;
-import com.kodilla.books.product.ProductService;
-import com.kodilla.books.product.ProductStatus;
-import com.vaadin.flow.component.datepicker.DatePicker;
+package com.kodilla.commerceApp.order;
 
 import java.time.LocalDate;
-import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
 import java.util.stream.Collectors;

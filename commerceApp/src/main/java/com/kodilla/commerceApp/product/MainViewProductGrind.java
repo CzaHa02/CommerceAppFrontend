@@ -1,9 +1,6 @@
-package com.kodilla.books.product;
+package com.kodilla.commerceApp.product;
 
-import com.kodilla.books.MainView;
-import com.kodilla.books.product.ProductForm;
-import com.kodilla.books.product.ProductService;
-import com.kodilla.books.product.ProductStatus;
+import com.kodilla.commerceApp.MainView;
 import com.vaadin.flow.component.UI;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.grid.Grid;

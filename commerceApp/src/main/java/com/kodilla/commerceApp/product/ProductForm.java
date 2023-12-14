@@ -1,6 +1,4 @@
-package com.kodilla.books.product;
-import com.kodilla.books.MainView;
-import com.vaadin.flow.component.UI;
+package com.kodilla.commerceApp.product;
 import com.vaadin.flow.component.button.ButtonVariant;
 import com.vaadin.flow.component.combobox.ComboBox;
 import com.vaadin.flow.component.formlayout.FormLayout;

@@ -1,11 +1,7 @@
-package com.kodilla.books.order;
+package com.kodilla.commerceApp.order;
 
-import com.kodilla.books.MainView;
-import com.kodilla.books.product.MainViewProductGrind;
-import com.kodilla.books.product.ProductForm;
-import com.kodilla.books.product.ProductService;
+import com.kodilla.commerceApp.MainView;
 import com.vaadin.flow.component.UI;
-import com.vaadin.flow.component.datepicker.DatePicker;
 import com.vaadin.flow.component.grid.Grid;
 
 import com.vaadin.flow.component.button.Button;
