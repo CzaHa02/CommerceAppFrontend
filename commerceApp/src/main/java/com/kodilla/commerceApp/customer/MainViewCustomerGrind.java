@@ -1,7 +1,8 @@
 package com.kodilla.commerceApp.customer;
 
 
-import com.kodilla.commerceApp.OverallView.HomepageMainView;
+
+import com.kodilla.commerceApp.overallView.HomepageMainView;
 import com.vaadin.flow.component.UI;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.grid.Grid;
@@ -11,11 +12,9 @@ import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.component.textfield.TextField;
 import com.vaadin.flow.data.value.ValueChangeMode;
 import com.vaadin.flow.router.Route;
-import jakarta.annotation.security.PermitAll;
 
 
 import java.util.Objects;
-@PermitAll
 @Route("Customers")
 public class MainViewCustomerGrind extends VerticalLayout {
     private Button back = new Button("Go back");
@@ -35,11 +34,7 @@ public class MainViewCustomerGrind extends VerticalLayout {
         filter.setClearButtonVisible(true);
         filter.setValueChangeMode(ValueChangeMode.EAGER);
         filter.addValueChangeListener(event -> update());
-<<<<<<< HEAD:commerceApp/src/main/java/com/kodilla/commerceApp/customer/MainViewCustomerGrind.java
-        customerGrid.setColumns("customerName", "customerSurname", "NIP", "mail", "nameOfCustomerCompany");
-=======
-        customerGrid.setColumns("customerName", "customerSurname", "nip", "email", "nameOfCustomerCompany");
->>>>>>> 91782a1b393e1c01b6e9df29cba6ec6610f3deba:commerceApp/src/main/java/com/kodilla/books/customer/MainViewCustomerGrind.java
+        customerGrid.setColumns("customerName", "customerSurname", "NIP", "mail", "ameOfCustomerCompany");
 
         addNewCustomer.addClickListener(event -> {
             customerGrid.asSingleSelect().clear();
@@ -78,7 +73,6 @@ public class MainViewCustomerGrind extends VerticalLayout {
         private String customerName;
         private String customerSurname;
 
-<<<<<<< HEAD:commerceApp/src/main/java/com/kodilla/commerceApp/customer/MainViewCustomerGrind.java
         private int NIP;
         private String mail;
 
@@ -88,24 +82,11 @@ public class MainViewCustomerGrind extends VerticalLayout {
 
         public Customer(){}
 
-
         public Customer(String customerName, String customerSurname, int NIP, String mail, String nameOfCustomerCompany) {
             this.customerName = customerName;
             this.customerSurname = customerSurname;
             this.NIP = NIP;
             this.mail = mail;
-=======
-        private int nip;
-        private String email;
-
-        private String nameOfCustomerCompany;
-
-        public Customer(String customerName, String customerSurname, int nip,String email, String nameOfCustomerCompany) {
-            this.customerName = customerName;
-            this.customerSurname = customerSurname;
-            this.nip = nip;
-            this.email = email;
->>>>>>> 91782a1b393e1c01b6e9df29cba6ec6610f3deba:commerceApp/src/main/java/com/kodilla/books/customer/MainViewCustomerGrind.java
             this.nameOfCustomerCompany = nameOfCustomerCompany;
         }
 
@@ -125,30 +106,20 @@ public class MainViewCustomerGrind extends VerticalLayout {
             this.customerSurname = customerSurname;
         }
 
-        public int getNip() {
-            return nip;
+        public int getNIP() {
+            return NIP;
         }
 
-        public void setNip(int nip) {
-            this.nip = nip;
+        public void setNIP(int NIP) {
+            this.NIP = NIP;
         }
 
-<<<<<<< HEAD:commerceApp/src/main/java/com/kodilla/commerceApp/customer/MainViewCustomerGrind.java
         public String getMail() {
             return mail;
         }
 
-
-        public void setMail(String mail) {
+        public void setEmail(String mail) {
             this.mail = mail;
-=======
-        public String getEmail() {
-            return email;
-        }
-
-        public void setEmail(String email) {
-           this.email = email;
->>>>>>> 91782a1b393e1c01b6e9df29cba6ec6610f3deba:commerceApp/src/main/java/com/kodilla/books/customer/MainViewCustomerGrind.java
         }
 
         public String getNameOfCustomerCompany() {
@@ -164,20 +135,12 @@ public class MainViewCustomerGrind extends VerticalLayout {
             if (this == o) return true;
             if (o == null || getClass() != o.getClass()) return false;
             Customer customer = (Customer) o;
-<<<<<<< HEAD:commerceApp/src/main/java/com/kodilla/commerceApp/customer/MainViewCustomerGrind.java
             return NIP == customer.NIP && Objects.equals(customerName, customer.customerName) && Objects.equals(customerSurname, customer.customerSurname) && Objects.equals(mail, customer.mail) && Objects.equals(nameOfCustomerCompany, customer.nameOfCustomerCompany);
-=======
-            return nip == customer.nip && Objects.equals(customerName, customer.customerName) && Objects.equals(customerSurname, customer.customerSurname) && Objects.equals(email, customer.email) && Objects.equals(nameOfCustomerCompany, customer.nameOfCustomerCompany);
->>>>>>> 91782a1b393e1c01b6e9df29cba6ec6610f3deba:commerceApp/src/main/java/com/kodilla/books/customer/MainViewCustomerGrind.java
         }
 
         @Override
         public int hashCode() {
-<<<<<<< HEAD:commerceApp/src/main/java/com/kodilla/commerceApp/customer/MainViewCustomerGrind.java
             return Objects.hash(customerName, customerSurname, NIP, mail, nameOfCustomerCompany);
-=======
-            return Objects.hash(customerName, customerSurname, nip, email, nameOfCustomerCompany);
->>>>>>> 91782a1b393e1c01b6e9df29cba6ec6610f3deba:commerceApp/src/main/java/com/kodilla/books/customer/MainViewCustomerGrind.java
         }
 
 

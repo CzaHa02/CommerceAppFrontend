@@ -1,6 +1,6 @@
-package com.kodilla.commerceApp.OverallView;
+package com.kodilla.commerceApp.overallView;
 
-import com.kodilla.commerceApp.Security.SecurityService;
+import com.kodilla.commerceApp.security.SecurityService;
 import com.kodilla.commerceApp.customer.MainViewCustomerGrind;
 import com.kodilla.commerceApp.order.MainViewOrderGrind;
 import com.kodilla.commerceApp.product.MainViewProductGrind;

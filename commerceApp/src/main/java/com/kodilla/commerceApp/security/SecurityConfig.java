@@ -1,5 +1,5 @@
-package com.kodilla.commerceApp.Security;
-import com.kodilla.commerceApp.OverallView.LoginView;
+package com.kodilla.commerceApp.security;
+import com.kodilla.commerceApp.overallView.LoginView;
 import com.vaadin.flow.spring.security.VaadinWebSecurity;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

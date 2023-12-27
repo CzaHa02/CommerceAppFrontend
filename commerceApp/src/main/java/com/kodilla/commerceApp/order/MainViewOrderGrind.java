@@ -1,6 +1,6 @@
 package com.kodilla.commerceApp.order;
 
-import com.kodilla.commerceApp.OverallView.HomepageMainView;
+import com.kodilla.commerceApp.overallView.HomepageMainView;
 import com.vaadin.flow.component.UI;
 import com.vaadin.flow.component.grid.Grid;
 
