@@ -27,9 +27,9 @@ public class CustomerForm extends FormLayout {
 
     private TextField NIP = new TextField("NIP number");
 
-    private TextField Email = new TextField("Email");
+    private TextField mail = new TextField("Email of customer");
 
-    private TextField companyName= new TextField("Name of customer company");
+    private TextField nameOfCustomerCompany= new TextField("Name of customer company");
 
     public CustomerForm (MainViewCustomerGrind mainViewOrderGrind){
         HorizontalLayout buttons = new HorizontalLayout(save,delete);
@@ -37,9 +37,8 @@ public class CustomerForm extends FormLayout {
 
         setSizeFull();
 
-        add(customerName,customerSurname,NIP,Email,companyName,buttons);
+        add(customerName,customerSurname,NIP,mail,nameOfCustomerCompany,buttons);
         binder.bindInstanceFields(this);
-        binder.forField(Email).bind("Email");
         this.mainViewCustomerGrind=mainViewOrderGrind;
 
         save.addClickListener(event -> save());

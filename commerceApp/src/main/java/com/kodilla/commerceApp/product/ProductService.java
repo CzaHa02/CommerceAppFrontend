@@ -5,6 +5,8 @@ import java.util.HashSet;
 import java.util.stream.Collectors;
 
 public class ProductService {
+
+    ProductStatus productStatus;
     private Set<MainViewProductGrind.Product> products;
     private static ProductService productService;
 
@@ -45,12 +47,12 @@ public class ProductService {
 
     private Set<MainViewProductGrind.Product> exampleData() {
         Set<MainViewProductGrind.Product> products = new HashSet<>();
-        products.add(new MainViewProductGrind.Product("Rura stalowa szwowa", 9655625,  1234, 15, ProductStatus.IN_STOCK));
+        products.add(new MainViewProductGrind.Product("Rura stalowa szwowa", 9655625,  1234, 15,ProductStatus.RESERVATION));
         products.add(new MainViewProductGrind.Product("Rura stalowa szwowa", 4156416,  365, 78,ProductStatus.IN_STOCK));
-        products.add(new MainViewProductGrind.Product("Rura stalowa szwowa", 9655625,  1234, 15,ProductStatus.IN_PROGRESS));
+        products.add(new MainViewProductGrind.Product("Rura stalowa szwowa", 9655625,  1234, 15,ProductStatus.SOLD));
         products.add(new MainViewProductGrind.Product("Rura stalowa bezszwowa2", 1324345,  9273.23,12, ProductStatus.SOLD));
         products.add(new MainViewProductGrind.Product("Rura stalowa kotłowa", 53255,  334, 100,ProductStatus.SOLD));
-        products.add(new MainViewProductGrind.Product("Rura stalowa bezszwowa1", 6723245,  121,25, ProductStatus.IN_PROGRESS));
+        products.add(new MainViewProductGrind.Product("Rura stalowa bezszwowa1", 6723245,  121,25, ProductStatus.RESERVATION));
         return products;
     }
 }

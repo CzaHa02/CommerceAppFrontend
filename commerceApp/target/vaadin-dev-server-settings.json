@@ -1,0 +1,17 @@
+{
+  "frontendFolder": "M:/Project CommerceApp/CommerceAppDisc/CommerceAppFrontend/commerceApp/./frontend",
+  "themeFolder": "themes",
+  "themeResourceFolder": "M:/Project CommerceApp/CommerceAppDisc/CommerceAppFrontend/commerceApp/./frontend/generated/jar-resources",
+  "staticOutput": "M:/Project CommerceApp/CommerceAppDisc/CommerceAppFrontend/commerceApp/target/classes/META-INF/VAADIN/webapp/VAADIN/static",
+  "generatedFolder": "generated",
+  "statsOutput": "M:\\Project CommerceApp\\CommerceAppDisc\\CommerceAppFrontend\\commerceApp\\target\\classes\\META-INF\\VAADIN\\config",
+  "frontendBundleOutput": "M:\\Project CommerceApp\\CommerceAppDisc\\CommerceAppFrontend\\commerceApp\\target\\classes\\META-INF\\VAADIN\\webapp",
+  "devBundleOutput": "M:/Project CommerceApp/CommerceAppDisc/CommerceAppFrontend/commerceApp/src/main/dev-bundle/webapp",
+  "devBundleStatsOutput": "M:/Project CommerceApp/CommerceAppDisc/CommerceAppFrontend/commerceApp/src/main/dev-bundle/config",
+  "jarResourcesFolder": "M:/Project CommerceApp/CommerceAppDisc/CommerceAppFrontend/commerceApp/./frontend/generated/jar-resources",
+  "themeName": "",
+  "clientServiceWorkerSource": "M:\\Project CommerceApp\\CommerceAppDisc\\CommerceAppFrontend\\commerceApp\\target\\sw.ts",
+  "pwaEnabled": false,
+  "offlineEnabled": false,
+  "offlinePath": "'offline.html'"
+}

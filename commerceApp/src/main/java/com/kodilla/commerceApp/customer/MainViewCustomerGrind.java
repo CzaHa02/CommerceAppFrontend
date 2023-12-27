@@ -1,7 +1,7 @@
 package com.kodilla.commerceApp.customer;
 
 
-import com.kodilla.commerceApp.MainView;
+import com.kodilla.commerceApp.OverallView.HomepageMainView;
 import com.vaadin.flow.component.UI;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.grid.Grid;
@@ -11,9 +11,11 @@ import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.component.textfield.TextField;
 import com.vaadin.flow.data.value.ValueChangeMode;
 import com.vaadin.flow.router.Route;
+import jakarta.annotation.security.PermitAll;
 
 
 import java.util.Objects;
+@PermitAll
 @Route("Customers")
 public class MainViewCustomerGrind extends VerticalLayout {
     private Button back = new Button("Go back");
@@ -33,7 +35,7 @@ public class MainViewCustomerGrind extends VerticalLayout {
         filter.setClearButtonVisible(true);
         filter.setValueChangeMode(ValueChangeMode.EAGER);
         filter.addValueChangeListener(event -> update());
-        customerGrid.setColumns("customerName", "customerSurname", "NIP", "Email", "companyName");
+        customerGrid.setColumns("customerName", "customerSurname", "NIP", "mail", "nameOfCustomerCompany");
 
         addNewCustomer.addClickListener(event -> {
             customerGrid.asSingleSelect().clear();
@@ -56,7 +58,7 @@ public class MainViewCustomerGrind extends VerticalLayout {
         setSizeFull();
         customerGrid.setSizeFull();
         back.addClickListener(event -> {
-            UI.getCurrent().navigate(MainView.class);
+            UI.getCurrent().navigate(HomepageMainView.class);
         });
         refresh();
 
@@ -73,19 +75,22 @@ public class MainViewCustomerGrind extends VerticalLayout {
         private String customerSurname;
 
         private int NIP;
-        private String Email;
+        private String mail;
 
         private String nameOfCustomerCompany;
 
-        public Customer(String customerName, String customerSurname, int NIP, String Email, String nameOfCustomerCompany) {
+
+
+        public Customer(){}
+
+
+        public Customer(String customerName, String customerSurname, int NIP, String mail, String nameOfCustomerCompany) {
             this.customerName = customerName;
             this.customerSurname = customerSurname;
             this.NIP = NIP;
-            this.Email = Email;
+            this.mail = mail;
             this.nameOfCustomerCompany = nameOfCustomerCompany;
         }
-
-        public Customer(){}
 
         public String getCustomerName() {
             return customerName;
@@ -111,12 +116,13 @@ public class MainViewCustomerGrind extends VerticalLayout {
             this.NIP = NIP;
         }
 
-        public String getEmail() {
-            return Email;
+        public String getMail() {
+            return mail;
         }
 
-        public void setEmail(String email) {
-            Email = email;
+
+        public void setMail(String mail) {
+            this.mail = mail;
         }
 
         public String getNameOfCustomerCompany() {
@@ -132,12 +138,12 @@ public class MainViewCustomerGrind extends VerticalLayout {
             if (this == o) return true;
             if (o == null || getClass() != o.getClass()) return false;
             Customer customer = (Customer) o;
-            return NIP == customer.NIP && Objects.equals(customerName, customer.customerName) && Objects.equals(customerSurname, customer.customerSurname) && Objects.equals(Email, customer.Email) && Objects.equals(nameOfCustomerCompany, customer.nameOfCustomerCompany);
+            return NIP == customer.NIP && Objects.equals(customerName, customer.customerName) && Objects.equals(customerSurname, customer.customerSurname) && Objects.equals(mail, customer.mail) && Objects.equals(nameOfCustomerCompany, customer.nameOfCustomerCompany);
         }
 
         @Override
         public int hashCode() {
-            return Objects.hash(customerName, customerSurname, NIP, Email, nameOfCustomerCompany);
+            return Objects.hash(customerName, customerSurname, NIP, mail, nameOfCustomerCompany);
         }
 
 

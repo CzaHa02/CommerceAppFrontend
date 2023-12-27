@@ -1,6 +1,6 @@
 package com.kodilla.commerceApp.product;
 
-import com.kodilla.commerceApp.MainView;
+import com.kodilla.commerceApp.OverallView.HomepageMainView;
 import com.vaadin.flow.component.UI;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.grid.Grid;
@@ -10,10 +10,11 @@ import com.vaadin.flow.component.textfield.TextField;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.data.value.ValueChangeMode;
 import com.vaadin.flow.router.Route;
+import jakarta.annotation.security.PermitAll;
 
 import java.util.Objects;
 
-
+@PermitAll
 @Route("Products")
 
 public class MainViewProductGrind extends VerticalLayout {
@@ -51,7 +52,7 @@ public class MainViewProductGrind extends VerticalLayout {
         add(toolbar, mainContent);
         form.setProduct(null);
         back.addClickListener(event -> {
-            UI.getCurrent().navigate(MainView.class);
+            UI.getCurrent().navigate(HomepageMainView.class);
         });
         mainContent.setSizeFull();
         setSizeFull();
