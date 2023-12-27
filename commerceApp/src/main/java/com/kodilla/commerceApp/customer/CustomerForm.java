@@ -20,16 +20,22 @@ public class CustomerForm extends FormLayout {
     private Button delete = new Button("delete");
 
 
-    private TextField customerName= new TextField("Name of customer");
+    private TextField customerName= new TextField("customerName");
 
 
-    private TextField customerSurname= new TextField("Surname of customer");
+    private TextField customerSurname= new TextField("customerSurname");
 
-    private TextField NIP = new TextField("NIP number");
+    private TextField nip = new TextField("nip");
 
+<<<<<<< HEAD:commerceApp/src/main/java/com/kodilla/commerceApp/customer/CustomerForm.java
     private TextField mail = new TextField("Email of customer");
 
     private TextField nameOfCustomerCompany= new TextField("Name of customer company");
+=======
+    private TextField email = new TextField("email");
+
+    private TextField nameOfCustomerCompany= new TextField("nameOfCustomerCompany");
+>>>>>>> 91782a1b393e1c01b6e9df29cba6ec6610f3deba:commerceApp/src/main/java/com/kodilla/books/customer/CustomerForm.java
 
     public CustomerForm (MainViewCustomerGrind mainViewOrderGrind){
         HorizontalLayout buttons = new HorizontalLayout(save,delete);
@@ -37,7 +43,11 @@ public class CustomerForm extends FormLayout {
 
         setSizeFull();
 
+<<<<<<< HEAD:commerceApp/src/main/java/com/kodilla/commerceApp/customer/CustomerForm.java
         add(customerName,customerSurname,NIP,mail,nameOfCustomerCompany,buttons);
+=======
+        add(customerName,customerSurname,nip,email,nameOfCustomerCompany,buttons);
+>>>>>>> 91782a1b393e1c01b6e9df29cba6ec6610f3deba:commerceApp/src/main/java/com/kodilla/books/customer/CustomerForm.java
         binder.bindInstanceFields(this);
         this.mainViewCustomerGrind=mainViewOrderGrind;
 

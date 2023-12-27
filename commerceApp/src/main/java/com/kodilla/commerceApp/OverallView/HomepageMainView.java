@@ -43,10 +43,13 @@ public class HomepageMainView extends VerticalLayout implements AppShellConfigur
         );
 
         HorizontalLayout header = new HorizontalLayout();
+
         H1 title = new H1("HOMEPAGE");
+
         header.add(title);
 
-        tabs.setAutoselect(false);
+
+        tabs.setAutoselect(true);
         tabs.setOrientation(Tabs.Orientation.VERTICAL);
         tabs.setWidthFull();
 
